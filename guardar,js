@@ -1,0 +1,106 @@
+/*
+    //Mensajes simples
+
+  if (!message.content.startsWith(config.prefix)) return;
+
+  if (message.author.bot) return;
+
+  if (message.content.startsWith(prefix + "ping")) 
+  {
+    message.channel.send("pong!");
+  } else
+
+  if (message.content.startsWith(prefix + "hola")) 
+  {
+    message.channel.send("Hola que tal?")   
+  }
+
+    //Mensajes Embed
+
+  if (message.content.startsWith(prefix + "triste")) 
+  {
+      //simple
+      message.channel.send({embed: {
+        color: 3447003,
+        description: "Tas bien crack?"
+      }})
+  } 
+*/
+      //con la clase (no funka :(  ))
+  /*if (message.content.startsWith(prefix +"richembed" ))
+  {
+    const embed = new Discord.em() 
+    .setTitle("Este es su título, puede contener 256 caracteres")
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .setColor(0x00AE86)
+    .setDescription("Este es el cuerpo principal del texto, puede contener 2048 caracteres.")
+    .setFooter("Pie de página, puede contener 2048 caracteres", client.user.avatarURL)
+    .setImage(message.author.avatarURL)
+    .setThumbnail(message.author.avatarURL)
+    .setTimestamp()
+    .setURL("https://github.com/CraterMaik")
+    .addField("Este es un título de campo, puede contener 256 caracteres",
+      "Este es un valor de campo, puede contener 2048 caracteres.")
+    .addField("Campo en línea", "Debajo del campo en línea", true)
+    .addBlankField(true)
+    .addField("Campo en línea 3", "Puede tener un máximo de 25 campos.", true);
+    
+    message.channel.send({embed});
+  }*/
+
+/*
+  if (message.content.startsWith(prefix + "embed"))
+  {
+    message.channel.send({embed:{
+      color: 3447003,
+      author: {
+        name: client.user.username,
+        icon_url: client.user.avatarURL
+      },
+      title: "Enlace Embed",
+      url: "https://github.com/CraterMaik",
+      description: "Mensade de descripcion xDDDDDDD",
+
+      fields: [
+      {
+        name: "Campo1",
+        value: "Variossssssssssssssssssssssssss"
+      },
+      {
+        name: "Campo2",
+        value: "Equis DEEEEEEEEEEEEEEEEEEE"
+      },
+      {
+        name: "Campo3",
+        value: "Feoooooooooooooo :v"
+      }
+    ],
+
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: 'Pito'
+    }
+    }
+    });
+  }
+
+  if(command === 'addrol')
+{
+  let miembro = message.mentions.members.first();
+  let nombrerol = args.slice(1).join(' ');
+  const autor = message.author;
+
+  let role =  message.guild.roles.cache.find(role => role.name = `**${nombrerol}**`);
+  let perms = message.member.hasPermission("MANAGE_ROLES_OR_PERMISSIONS");
+
+  if(!perms) return message.channel.send("`Error` `|` No tienes permisos para usar este comando");
+
+  if(message.mentions.users.size < 1) return message.reply('Debe mencionar a un miembro.').catch(console.error);
+  if(!nombrerol) return message.channel.send('Escriba el nombre del rol a agregar, - `-addrol @username [rol]`');
+  if(!role) return message.channel.send('Rol no encontrado en este servidor');
+
+  miembro.roles.add(role.id).catch(console.error);
+  message.channel.send(`El rol **${role.name}** fue agregado correctamente a **${miembro.user.username}**.`);
+}
+*/

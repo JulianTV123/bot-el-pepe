@@ -1,0 +1,16 @@
+{
+  "name": "MiBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node mybot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-xp": "^1.1.7",
+    "discord.js": "^12.4.1"
+  }
+}
